@@ -1,3 +1,5 @@
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -67,12 +69,20 @@
         .active-route {
             background-color: rgba(155, 173, 134, 0.493);
             color:white;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+                
+            }
+
             &:hover {
                 color:white;
                 background-color: rgba(123, 138, 106, 0.493);
             }
 
         }
+
+      
         .header__nav-item {
             margin-left: 1rem;
             font-size: 1rem;
