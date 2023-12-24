@@ -1,0 +1,15 @@
+<div (click)="addToUrl($event)"  class="book-item-container">
+   
+    <div  class="book-item-image">
+        <img src="{{book.imageLinks?.smallThumbnail || defaultBookImg}}" alt="">
+    </div>
+    <div class="book-item-content">
+        <h2>{{book.title}}</h2>
+        <p *ngFor="let author of book.authors">{{author}}</p>
+        <p>{{book.publishedDate}}</p>
+    </div>
+    <div *ngIf="modalType === 'whitelist'" class="book-item-actions">
+        <button (click)="removeFromWhitelists()">Remove from whitelist</button>
+    </div>
+
+</div>

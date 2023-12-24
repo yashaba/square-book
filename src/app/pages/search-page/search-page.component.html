@@ -1,0 +1,20 @@
+
+
+
+<div class="search-page-container">
+    <div>
+        <h1>
+            Search for a book
+        </h1>
+    </div>
+    <form action="">
+        
+        <input type="text" [formControl]="searchTerm" placeholder="Enter book title">
+        <div *ngIf="searchTerm.invalid && (searchTerm.dirty || searchTerm.touched)">
+            <p *ngIf="searchTerm.errors?.['required']">Book title is required.</p>
+          </div>
+    </form>
+
+    <app-books-list [modalType]="'books'" (removeFromWhitelistEv)="removeFromWhitelist" [isLoading$]="isLoading$" [books$]="books$"></app-books-list>
+   <app-book-details-modal [modalType]="'books'"></app-book-details-modal>
+</div>

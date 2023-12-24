@@ -1,0 +1,19 @@
+
+
+
+<div class="welcome-page-container">
+<div>
+    <h1>
+        Welcome to the Square Book, please enter your username to continue.
+    </h1>
+</div>
+<form  (ngSubmit)="setUsername()">
+    <input type="text" [formControl]="username" placeholder="Enter username">
+    <div *ngIf="username.invalid && (username.dirty || username.touched)">
+        <p *ngIf="username.errors?.['required']">Username is required.</p>
+    </div>
+    <button class="form-btn" type="submit" [disabled]="username.invalid">Set</button>
+
+</form>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="books-list-container">
+            <div  *ngIf="books$ | async; else loading" class="books-list" [style]="modalType === 'whitelist' ? 'height: 94vh' : 'height: 81vh'">
+                <app-book-item  *ngFor="let book of books$ | async" [modalType]="modalType" (removeFromWhitelistEv)="removeFromWhitelists($event)" [book]="book"></app-book-item>
+            </div>
+    <ng-template #noResults>
+        <div>
+            <h2>No results found</h2>
+        </div>
+    </ng-template>
+
+    <ng-template #loading>
+        <div>
+            <h2>Loading...</h2>
+        </div>
+    </ng-template>
+    <!-- <div class="pagination-container">
+        <button (click)="previousPage()" [disabled]="!previousPageToken">Previous</button>
+        <button (click)="nextPage()" [disabled]="!nextPageToken">Next</button>
+    </div> -->
+
+</div>

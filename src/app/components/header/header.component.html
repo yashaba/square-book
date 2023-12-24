@@ -1,0 +1,14 @@
+<div *ngIf="username$ | async" class="header">
+    <div class="user-container">
+        <div style="align-self: center;">
+            Welcome {{ username$ | async}} !
+        </div>
+        <div>
+            <button (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="navigation">
+      <a  [routerLinkActive]="'active-route'" [routerLink]="'books/all'">Search</a>
+      <a  [routerLinkActive]="'active-route'"  [routerLink]="'whitelist/all'">Whitelist</a>
+    </div>
+</div>

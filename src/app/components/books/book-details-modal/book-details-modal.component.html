@@ -1,0 +1,22 @@
+<div (click)="closeModal()" *ngIf="book$ | async as book" class="book-details-container">
+    <div class="book-details">
+        <div>
+            <div class="book-details-image">
+                <img src="{{book?.imageLinks?.thumbnail || defaultBookImg}}" alt="">
+            </div>
+            <div class="book-details-content">
+                <h2>{{book.title}}</h2>
+                <p *ngFor="let author of book.authors">{{author}}</p>
+                <p>{{book.publishedDate}}</p>
+                <p>{{book.description}}</p>
+            </div>
+        </div>
+        <div class="book-details-actions">
+            <button *ngIf="modalType === 'books' && !(isWhitelisted(book.id) | async  )  else whitelist" (click)="addToWhitelist(book)"> Add to
+            whitelist</button>
+            <ng-template #whitelist>
+                <button (click)="removeFromWhitelists(book.id)">Remove from whitelist</button>
+            </ng-template>
+        </div>
+    </div>
+</div>

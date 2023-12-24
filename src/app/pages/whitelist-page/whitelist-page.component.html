@@ -1,0 +1,5 @@
+<div class="white-list-container">
+ <app-books-list [modalType]="'whitelist'" (removeFromWhitelistEv)="removeFromWhitelist($event)" [books$]="books$"></app-books-list>
+ <app-book-details-modal [modalType]="'whitelist'"></app-book-details-modal>
+
+</div>

@@ -1,0 +1,15 @@
+.books-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    overflow-y: scroll;
+    gap: 10px;
+  }
+}

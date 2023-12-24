@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .user-container{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    line-height: 1.5rem;
+     div {
+        margin-right: 1rem;
+
+        button {
+            padding: 1rem;
+            margin-left: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 0.25rem;
+            min-width: 110px;
+            text-align: center;
+            cursor: pointer;
+            color:rgba(155, 173, 134, 0.493);
+            &:hover {
+                color:white;
+                background-color: rgba(123, 138, 106, 0.493);
+            }
+        }
+        
+    }}
+
+    .header__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+    }
+    .navigation {
+        display: flex;
+        align-items: center;
+        a {
+            padding: 1rem;
+            margin-left: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 0.25rem;
+            min-width: 110px;
+            text-align: center;
+            color: #000;
+            cursor: pointer;
+            &:hover {
+                color: rgba(155, 173, 134, 0.493);
+            }
+          
+        }
+
+        .active-route {
+            background-color: rgba(155, 173, 134, 0.493);
+            color:white;
+            &:hover {
+                color:white;
+                background-color: rgba(123, 138, 106, 0.493);
+            }
+
+        }
+        .header__nav-item {
+            margin-left: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #000;
+            cursor: pointer;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    .header__user {
+        display: flex;
+        align-items: center;
+        .header__user-avatar {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    }
+
+}

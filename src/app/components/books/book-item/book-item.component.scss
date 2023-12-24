@@ -1,0 +1,50 @@
+.book-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 22rem;
+  height: 100%;
+  gap: 15px;
+  cursor: pointer;
+  transition: 0.6s;
+
+  .book-item-image {
+    display: flex;
+    justify-content: center;
+    img {
+      max-height: 13rem;
+      height: 13rem;
+    }
+  }
+
+  .book-item-content {
+    text-wrap: wrap;
+    text-align: center;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.25rem;
+    min-width: 110px;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(155, 173, 134, 0.493);
+    &:hover {
+      color: white;
+      background-color: rgba(123, 138, 106, 0.493);
+    }
+  }
+}
